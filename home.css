@@ -184,7 +184,22 @@ header{
     margin: 5px 0 10px;
     /* To remain title in */
     display: -webkit-box;
-    -webkit-line-clamp: 2;
+    -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden
+}
+
+.profile{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.profile-img{
+    width: 35px;
+    height: 35px;
+    object-position: center;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--second-color);
 }
