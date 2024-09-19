@@ -80,6 +80,20 @@ header.shadow .logo{
     color: var(--second-color);
 }
 
+.post-btn{
+    padding: 8px 14px;
+    text-transform: uppercase;
+    font-weight: 500;
+    border-radius: 4px;
+    background: var(--second-color);
+    color: var(--bg-color);
+}
+
+.post-btn:hover{
+    background: hsl(24, 98%, 58%);
+    transition: 0.3s;
+}
+
 .login{
     padding: 8px 14px;
     text-transform: uppercase;
@@ -267,8 +281,17 @@ header.shadow .logo{
 }
 
 .home-back{
-    color: var(--second-color);
-    font-size: 0.9rem;
+    padding: 8px 14px;
+    text-transform: uppercase;
+    font-weight: 500;
+    border-radius: 4px;
+    background: var(--second-color);
+    color: var(--bg-color);
+}
+
+.home-back:hover{
+    background: hsl(24, 98%, 58%);
+    transition: 0.3s;
 }
 
 .header-title{
