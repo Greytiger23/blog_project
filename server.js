@@ -115,6 +115,18 @@ app.get('/edit', (req, res) => {
     res.sendFile(path.join(right_path, "edit.html"));
 })
 
+app.get('/profile', (req, res) => {
+  const userId = req.query.userId;
+  User.findById(userId, (err, user) => {
+    if (err) {
+      console.error(err);
+      res.status(500).send({ message: 'Error retrieving user data' });
+    } else {
+      res.render('profile', { user });
+    }
+  });
+});
+
 app.post('/upload',(req, res) => {
     let file = req.files.image;
     let date = new Date();
