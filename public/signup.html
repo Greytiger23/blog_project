@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Signup</title>
     <!-- Signup style link -->
-    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="css/login.css">
     <!-- Link to type of form -->
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
 </head>
@@ -15,7 +15,7 @@
         <div class="form sigup">
             <div class="form-content">
                 <header>Signup</header>
-                <form action="index.html">
+                <form action="loading.html">
                     <div class="field input-field">
                         <input type="email" placeholder="Email" class="input">
                     </div>
@@ -27,16 +27,36 @@
                         <i class="bx bx-hide eye-icon"></i>
                     </div>
                     <div class="field button-field">
-                        <button>Signup</button>
+                        <button type="submit">Signup</button>
                     </div>
                 </form>
-                <div class="form-link">
-                    <span>Already have an account? <a href="login.html" class="link login-link"></a></span>
-                </div>
+               <p>Already have an account? <a href="login.html">Login</a></p>
             </div>
         </div>
     </section>
-    <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios@0.21.1/dist/axios.min.js"></script>
+  <script>
+    const signupForm = document.getElementById('signup-form');
+
+    signupForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
+
+      axios.post('/signup', { name, email, password })
+        .then((response) => {
+          const token = response.data.token;
+          localStorage.setItem('token', token);
+          window.location.href = '/dashboard';
+        })
+        .catch((error) => {
+          console.error(error);
+        });
+    });
+  </script>
+    <script src="js/script.js"></script>
+    <script src="js/home.js"></script>
 </body>
 </body>
 </html>

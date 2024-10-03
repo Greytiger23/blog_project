@@ -5,18 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Post page</title>
     <!-- Link to css -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/edit.css">
+    <link rel="stylesheet" href="css/post.css">
+    <link rel="stylesheet" href="css/style.css">
     <!-- Box icons -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
     <!-- Header -->
-     <header>
+    <header>
         <div class="nav container">
             <a href="#" class="logo">The I<span> Word</span></a>
-            <a href="index.html" class="home-back">Home</a>
-        <!-- Login btn -->
-            <a href="#" class="login">Login</a>
+            <ul class="link-container">
+                <li class="link-item"><a href="home.html" class="link">home</a></li>
+                <li class="link-item"><a href="edit.html" class="link">edit</a></li>
+                <li class="link-item"><a href="post.html" class="link">posts</a></li>
+            </ul>    
         </div>
      </header>
     <!-- Post content -->
@@ -28,13 +32,22 @@
     </section>
     <!-- Posts -->
     <section class="post-content post container">
-       <h2 class="sub-heading">Create best post</h2>
-       <p class="post-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, repellendus quis eos facere expedita fuga modi nihil dicta, ullam similique a inventore enim quo exercitationem harum temporibus veritatis. Ipsum, iure?</p>
-       <p class="post-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, repellendus quis eos facere expedita fuga modi nihil dicta, ullam similique a inventore enim quo exercitationem harum temporibus veritatis. Ipsum, iure?</p>
-       <h2 class="sub-heading">Create best post</h2>
-       <p class="post-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, repellendus quis eos facere expedita fuga modi nihil dicta, ullam similique a inventore enim quo exercitationem harum temporibus veritatis. Ipsum, iure?</p>
-       <p class="post-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, repellendus quis eos facere expedita fuga modi nihil dicta, ullam similique a inventore enim quo exercitationem harum temporibus veritatis. Ipsum, iure?</p>
-       <p class="post-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, repellendus quis eos facere expedita fuga modi nihil dicta, ullam similique a inventore enim quo exercitationem harum temporibus veritatis. Ipsum, iure?</p>
+    </section>
+    <div class="banner"></div>
+    <div class="blogs">
+        <h1 class="title"></h1>
+        <p class="posted"><span>posted at - </span></p>
+        <div class="article">
+        </div>
+    </div>
+    <h1 class="sub-heading">Read more</h1>
+    <section class="blogs-sec">
+        <div class="blog-card">
+            <img src="image/header.jpg" alt="" class="blog-img">
+            <h1 class="blog-title">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique, dolor voluptatem dolore ad voluptate voluptatibus amet odio provident sed ullam hic harum, nemo repellendus? Provident aliquid doloribus accusantium consequatur tempora.</h1>
+            <p class="blog-view">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, fugiat quaerat labore quibusdam delectus blanditiis accusantium quae nesciunt fugit quo sint mollitia nemo laudantium quisquam aliquam consectetur quod dignissimos officia!</p>
+            <a href="/" class="btn light">read</a>
+        </div>
     </section>
     <!-- Share post -->
      <div class="share post-container">
@@ -58,6 +71,7 @@
     integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
     crossorigin="anonymous"></script>
     <!-- Link to js -->
-     <script src="script.js"></script>
+     <script src="js/script.js"></script>
+    <script src="js/post.js"></script>
 </body>
 </html>
